@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class BookRow extends Component {
   render() {
@@ -12,7 +13,9 @@ class BookRow extends Component {
           ))}
         </td>
         <td>
-          <button className="btn" style={{ backgroundColor: book.color }} />
+          <Link to={`/books/${book.color}`}>
+            <button className="btn" style={{ backgroundColor: book.color }} />
+          </Link>
         </td>
       </tr>
     );
